@@ -1,10 +1,8 @@
 #include "main.h"
 
 /**
- * Write a function that prints the alphabet, in lowercase
+ * print_alphabet - check the code for ALX School students.
  *
- * , followed by a new line.
- *  print_alphabet - print alphabets.
  */
 
 void print_alphabet(void)
