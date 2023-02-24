@@ -5,14 +5,14 @@
  */
 int main(void)
 {
-	char abe[] = "_putchar";
+	char word[] = "_putchar";
+	int i;
 
-	int c;
-
-	for (c = 0; c < 8; c++)
+	for(i = 0; i < 8; i++)
 	{
-		_putchar(abe[c]);
+		_putchar(word[i]);
 	}
 	_putchar('\n');
 	return (0);
-}
+} 
+
