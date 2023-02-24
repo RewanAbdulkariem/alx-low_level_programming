@@ -6,6 +6,7 @@
  * , followed by a new line.
  *  print_alphabet - print alphabets.
  */
+
 void print_alphabet(void)
 {
 	char alpha;
