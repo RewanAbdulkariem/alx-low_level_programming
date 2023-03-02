@@ -1,5 +1,5 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 
 /**
  * print_line - Print line dependent on the integer n.
@@ -8,14 +8,14 @@
  */
 void print_line(int n)
 {
-	int i;
+        int i;
 
-	i=0;
+        i = 0;
 
-	while (i < n)
-	{
-		_putchar('_');
-		i++;
-	}
-	_putchar('\n');
+        while (i < n)
+        {
+                _putchar('_');
+                i++;
+        }
+        _putchar('\n');
 }
