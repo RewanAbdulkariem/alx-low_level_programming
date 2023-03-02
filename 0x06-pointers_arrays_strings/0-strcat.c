@@ -21,4 +21,5 @@
  	{
  		dest[i] = src[i - l1];
  	}
+ 	return (dest);
  }
