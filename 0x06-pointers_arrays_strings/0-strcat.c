@@ -7,8 +7,8 @@
  * @src: a string to concatinate
  * Return: a pointer to the resulting string dest
  */
- char *_strcat(char *dest, char *src)
- {
+char *_strcat(char *dest, char *src)
+{
 	int l1 = 0, l2 = 0;
 
 	while ( dest[l1++] != '\0')
