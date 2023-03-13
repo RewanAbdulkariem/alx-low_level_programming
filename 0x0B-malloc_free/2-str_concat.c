@@ -8,9 +8,9 @@
  *
  * Return: pointer of an array of chars
  */
- char *str_concat(char *s1, char *s2)
- {
- 	char *strout;
+char *str_concat(char *s1, char *s2)
+{
+	char *strout;
 	unsigned int len1, len2, limit, k;
 
 	if (s1 == NULL)
@@ -23,9 +23,9 @@
 
 	for (len2 = 0; s2[len2] != '\0'; len2++)
 		;
-		
+
 	strout = malloc(sizeof(char) * (len1 + len2 + 1));
-	
+
 	if (strout == NULL)
 	{
 		free(strout);
@@ -40,4 +40,4 @@
 		strout[len1] = s2[len2];
 
 	return (strout);
- }
+}
