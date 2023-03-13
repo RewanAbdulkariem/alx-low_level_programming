@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdlib.h>
-/* 
- * _strdup -  function returns a pointer to a new string which is a duplicate of the string.
- * @str: string
+/**
+ * _strdup - returns a pointer to a newly allocated.
+ * @str: string.
  *
- * Return: a pointer to a newly allocated space in memory
+ * Return: pointer of an array of chars
  */
 char *_strdup(char *str)
 {
@@ -14,7 +14,8 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	for (len = 0; str[len] != '\0'; len++);
+	for (len = 0; str[len] != '\0'; len++)
+		;
 
 	strout = (char *)malloc(sizeof(char) * (len + 1));
 
