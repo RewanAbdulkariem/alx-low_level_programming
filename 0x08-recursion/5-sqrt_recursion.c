@@ -8,27 +8,27 @@ int _sqrt_recursion(int n)
 {
 	return (_sqrt(n, 1, n));
 }
-
 /**
  * _sqrt - recursively finds the square root of n
  * @n: the number to find the square root of
- * @i:num
+ * @start:num
+ * @end :end of range
  * Return: the square root of n, 
  * or -1 if n does not have a natural square root
  */
 int _sqrt(int n, int start, int end)
 {
 	int mid;
-	
+
 	if (n < 0)
 		return (-1);
 	if (n == 0 || n == 1)
 		return (n); 
 	if (start > end) 
 		return (end);
-	
+
 	mid = (start + end) / 2;
-	
+
 	if (mid * mid == n)
 		return (mid);
 	if (mid * mid < n)
