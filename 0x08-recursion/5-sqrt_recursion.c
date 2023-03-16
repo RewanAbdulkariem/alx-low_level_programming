@@ -13,7 +13,7 @@ int _sqrt_recursion(int n)
 * @n: the number to find the square root of
 * @start:num
 * @end :end of range
-* Return: the square root of n, 
+* Return: the square root of n
 * or -1 if n does not have a natural square root
 */
 int _sqrt(int n, int start, int end)
