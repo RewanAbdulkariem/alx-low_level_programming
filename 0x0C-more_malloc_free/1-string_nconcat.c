@@ -35,6 +35,7 @@ unsigned int _strlen(char *string)
 
  	len =  _strlen(s1) + n;
  	s3 = malloc(len * sizeof(char));
+
  	if (!s3)
  		return (NULL);
 
