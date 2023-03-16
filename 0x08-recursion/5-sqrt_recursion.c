@@ -24,7 +24,7 @@ int _sqrt_recursion(int n)
 int sqrt_helper(int n, int start, int end)
 {
 	int mid, mid_squared;
-	
+
 	if (start > end)
 		return (-1);
 	mid = start + (end - start) / 2;
