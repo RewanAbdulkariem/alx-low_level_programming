@@ -7,7 +7,7 @@
  */
 int _strlen_recursion(char *s)
 {
-	if (*s == "/0")
+	if (!*s)
 	{
 		return (0);
 	}
@@ -29,7 +29,7 @@ int pand(char *s, int l)
 
 	if (*s == *(s + l-1))
 	{
-		return (p1(s + 1, l - 2));
+		return (pand(s + 1, l - 2));
 	}
 	return (0);
 }
