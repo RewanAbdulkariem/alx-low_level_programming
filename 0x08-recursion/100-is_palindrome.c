@@ -27,7 +27,7 @@ int pand(char *s, int l)
 		return (1);
 	}
 
-	if (*s == *(s + l-1))
+	if (*s == *(s + l))
 	{
 		return (pand(s + 1, l - 2));
 	}
