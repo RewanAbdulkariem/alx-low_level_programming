@@ -12,7 +12,7 @@ int _sqrt_recursion(int n)
 	if (n == 0 || n == 1)
 		return (n);
 
-	return sqrt_helper(n, 1, n / 2);
+	return (sqrt_helper(n, 1, n / 2));
 }
 /**
  * sqrt_helper - main funct
@@ -21,11 +21,12 @@ int _sqrt_recursion(int n)
  * @end: end
  * Return: int
  */
-int sqrt_helper(int n, int start, int end) 
+int sqrt_helper(int n, int start, int end)
 {
 	int mid, mid_squared;
+	
 	if (start > end)
-		return (-1); 
+		return (-1);
 	mid = start + (end - start) / 2;
 	mid_squared = mid * mid;
 
