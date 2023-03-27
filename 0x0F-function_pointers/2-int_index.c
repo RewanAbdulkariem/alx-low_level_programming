@@ -1,9 +1,9 @@
 #include <stddef.h>
 /**
- * int_index - searches for an integer
- * @array: array with data
- * @size: the number of elements in the array 
- * @cmp: pointer to the function to be used to compare values
+ * int_index - searches for an integer.
+ * @array: array with data.
+ * @size: the number of elements in the array.
+ * @cmp: pointer to the function to be used to compare values.
  * Return: count of integer
  */
 int int_index(int *array, int size, int (*cmp)(int))
