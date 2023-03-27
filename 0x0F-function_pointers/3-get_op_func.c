@@ -5,7 +5,6 @@
 /**
  * get_op_func - ...
  * @s: ...
- *
  * Return:  a pointer to the function
  */
 int (*get_op_func(char *s))(int, int)
