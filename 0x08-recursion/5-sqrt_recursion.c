@@ -18,7 +18,7 @@ int _sqrt_recursion(int n)
 */
 int _sqrt(int n, int start, int end)
 {
-	int mid;
+	long mid;
 
 	if (n < 0)
 		return (-1);
