@@ -22,7 +22,7 @@ int _strlen_recursion(char *s)
  */
 int pand(char *s, int l)
 {
-	if (l <= 1)
+	if (l < 1)
 	{
 		return (1);
 	}
@@ -35,7 +35,7 @@ int pand(char *s, int l)
 }
 
 /**
- * is_palindrome - checks if a string is a palindrome using recursion
+ * is_palindrome - checks if a string is a palindrome
  * @s: pointer to string
  * Return: boolean (1 if palindrome, 0 if not)
  */
