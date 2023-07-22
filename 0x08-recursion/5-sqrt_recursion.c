@@ -25,7 +25,7 @@ int _sqrt(int n, int start, int end)
 	if (n == 0 || n == 1)
 		return (n);
 	if (start > end)
-		return (end);
+		return (-1);
 
 	mid = (start + end) / 2;
 
