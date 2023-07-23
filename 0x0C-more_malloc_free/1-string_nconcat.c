@@ -27,9 +27,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, j, len;
 
 	if (!s1)
-		s1 = " ";
+		s1 = "";
 	if (!s2)
-		s2 = " ";
+		s2 = "";
 	if (n >= _strlen(s2))
 		n = _strlen(s2);
 
