@@ -6,8 +6,8 @@
  */
 void print_dog(struct dog *d)
 {
-	char *name = "nil";
-	char *owner = "nil";
+	char *name = "(nil)";
+	char *owner = "(nil)";
 
 	if (d)
 	{
