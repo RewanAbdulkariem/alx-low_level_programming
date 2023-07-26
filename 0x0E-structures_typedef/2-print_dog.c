@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- *
+ * print_dog - print dog data
+ * @d: structure named d
  */
 void print_dog(struct dog *d)
 {
