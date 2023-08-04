@@ -19,7 +19,6 @@ void print_binary(unsigned long int n)
 	}
 	for (i = 0; i < len; i++)
 	{
-		/**printf("\n--%lu--%u-- \n",(n & (1u << (len-1))), (1u << (len-1)));*/
 		if ((n | (1u << (len - 1))) == n)
 			_putchar('1');
 		else
