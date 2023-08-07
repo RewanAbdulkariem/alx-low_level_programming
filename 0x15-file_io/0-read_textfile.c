@@ -11,24 +11,41 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char c;
-	int n = 0;
-	FILE *fp = fopen(filename, "r");
-
-	if (fp == NULL || filename == NULL)
+	ssize_t n = 0, file, w;
+	char *text;
+	
+	text = malloc(letters *sizeof(char));
+	if (text == NULL)
+		return (0);
+	if (filename == NULL || letters == 0)
+		return  (0);
+	
+	file = open(filename, O_RDONLY);
+	if (file < 0)
 	{
+		free(text);
 		return (0);
 	}
-	do {
-		c = fgetc(fp);
-		if (feof(fp))
-			break;
 
-		printf("%c", c);
+	n = read(file, text, letters);
+	if (n < 0)
+	{
+		free(text);
+		return (0);
+	}
+	text[n] = '\0';
 
-		n++;
-	} while (--letters > 0);
+	if (close(file) < 0)
+		return (0);
 
-	fclose(fp);
-	return (n);
+	w = write(STDOUT_FILENO, text, n);
+	if (w < 0)
+	{
+		free(text);
+		return (0);
+	}
+	
+	free (text);
+	return (w);
+	
 }
