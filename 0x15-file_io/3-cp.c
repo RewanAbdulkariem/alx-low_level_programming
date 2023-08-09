@@ -25,35 +25,27 @@ int main(int argc, char *argv[])
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (file_to < 0)
 	{
-		if (close(file_from) < 0)
-			ErrorClosing(file_from);
+		ErrorClosing(file_from);
 		ErrorWriting(argv[2]);
 	}
 	do {
 		n = read(file_from, buf, 1024);
 		if (n < 0)
 		{
-			if (close(file_from) < 0)
-				ErrorClosing(file_from);
-			if (close(file_to) < 0)
-				ErrorClosing(file_to);
+			ErrorClosing(file_from);
+			ErrorClosing(file_to);
 			ErrorReading(argv[1]);
 		}
 
 		if (write(file_to, buf, n) < 0)
 		{
-			if (close(file_from) < 0)
-				ErrorClosing(file_from);
-			if (close(file_to) < 0)
-				ErrorClosing(file_to);
+			ErrorClosing(file_from);
+			ErrorClosing(file_to);
 			ErrorWriting(argv[2]);
 		}
 	} while (n != 0);
-
-	if (close(file_from) < 0)
-		ErrorClosing(file_from);
-	if (close(file_to) < 0)
-		ErrorClosing(file_to);
+	ErrorClosing(file_from);
+	ErrorClosing(file_to);
 
 	return (0);
 }
@@ -72,8 +64,11 @@ void ErrorReading(char *file_name)
  */
 void ErrorClosing(int file)
 {
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d", file);
-	exit(100);
+	if (close(file) < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", file);
+		exit(100);
+	}
 }
 /**
  * ErrorWriting - Print error message and exit due to write error
