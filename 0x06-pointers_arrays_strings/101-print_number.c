@@ -27,8 +27,12 @@ void print_number(int n)
 	int power;
 
 	power = base10(8);
-
-	if (n < 0)
+	if (n == INT_MIN)
+	{
+		_putchar('-');
+		n = INT_MAX;
+	}
+	else if (n < 0)
 	{
 		_putchar('-');
 		n *= -1;
