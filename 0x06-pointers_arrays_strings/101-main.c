@@ -1,11 +1,10 @@
+#include "main.h"
 
 /**
  * main - check the code
  *
  * Return: Always 0.
  */
- extern int _putchar(char c);
-void print_number(int n);
 int main(void)
 {
     print_number(98);
