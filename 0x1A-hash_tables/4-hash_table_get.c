@@ -6,13 +6,14 @@
  * @ht: The hash table.
  * @key: The key to search for.
  *
- * Return: The value associated with the element, or NULL if key couldn't be found.
+ * Return: The value associated with the element,
+ * or NULL if key couldn't be found.
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int index;
 	hash_node_t *temp;
-	
+
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (0);
 
@@ -22,7 +23,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	while (temp != NULL)
 	{
 		if (strcmp(temp->key, key) == 0)
-			return temp->value;
+			return (temp->value);
 		temp = temp->next;
 	}
 	return (NULL);
