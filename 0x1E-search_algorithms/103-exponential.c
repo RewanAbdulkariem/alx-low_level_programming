@@ -13,14 +13,15 @@ int exponential_search(int *array, size_t size, int value)
 {
 	size_t step, low, high, i, mid;
 
-	if (array[0] == value)
-		return (0);
+    step = 1;
 
-	step = 1;
 	if (array == NULL || size == 0)
 		return (-1);
 
-	while (step < size && array[step] <= value)
+    if (array[0] == value)
+		return (0);
+
+    while (step < size && array[step] <= value)
 	{
 		printf("Value checked array[%lu] = [%d]\n", step, array[step]);
 		step = step * 2;
@@ -48,5 +49,4 @@ int exponential_search(int *array, size_t size, int value)
 			high = mid - 1;
 	}
 	return (-1);
-
 }
